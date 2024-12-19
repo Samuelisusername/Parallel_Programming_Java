@@ -5,7 +5,6 @@ public class MySemaphore {
 	private volatile int count;
 
 	public MySemaphore(int maxCount) {
-		//TODO initialize count suitably
 		this.count = maxCount;
 		
 	}
@@ -17,11 +16,10 @@ public class MySemaphore {
 		}
 		this.count++;
 		}
-		//TODO implment suitable monitor and implement semaphore acquisition
+
 	}
 
 	public synchronized void release() {
-		//TODO implment suitable monitor and implement semaphore release
 		synchronized(this) {
 			this.count--;
 			this.notifyAll();
